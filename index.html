@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduNest – Mobile Learning App for K–12</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+
+<body>
+    <!-- TOP BAR -->
+    <div class="top-bar">
+        <div class="top-left">
+            <span>📱 +91 98765 43210</span>
+            <span>✉️ support@edunest.com</span>
+        </div>
+        <div class="top-right">
+            <a href="login.html">Login</a>
+        </div>
+    </div>
+
+    <!-- MAIN HEADER -->
+    <header class="header">
+        <nav class="nav">
+
+            <!-- LEFT MENU -->
+            <ul class="nav-left">
+                <li><a href="/">Home</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#students">Students</a></li>
+                <li><a href="#parents">Parents</a></li>
+            </ul>
+
+            <!-- LOGO CENTER -->
+            <div class="logo"><a href="herf">EduNest</a></div>
+
+            <!-- RIGHT MENU -->
+            <ul class="nav-right">
+                <li><a href="#teachers">Teachers</a></li>
+                <li><a href="pricing.html">Pricing</a></li>
+                <!-- <li><a href="#">About</a></li> -->
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="javascript:void(0)" class="btn-primary" onclick="openModal()">Get Started</a></li>
+            </ul>
+
+            <!-- MOBILE MENU ICON -->
+            <div class="menu-toggle" id="menuToggle">☰</div>
+
+        </nav>
+    </header>
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="/">Home</a>
+        <a href="#features">Features</a>
+        <a href="#students">Students</a>
+        <a href="#parents">Parents</a>
+        <a href="#teachers">Teachers</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="contact.html">Contact</a>
+        <a href="login.html">Login</a>
+        <a href="#" class="btn-primary">Get Started</a>
+    </div>
+    <div class="hero-slider">
+
+        <!-- SLIDE 1 -->
+        <div class="hero-slide slide-1 active">
+            <div class="hero-bg"></div>
+            <div class="hero-content">
+                <h1>Learn Smarter. Grow Faster. 🚀</h1>
+                <p>
+                    EduNest is a next-gen K–12 learning platform with gamified lessons,
+                    real-time progress tracking, and powerful tools.
+                </p>
+            </div>
+
+            <!-- FLOATING CARDS -->
+            <div class="floating-cards">
+                <div class="card card1">🏆 +50 Points</div>
+                <div class="card card2">🔥 5 Day Streak</div>
+                <div class="card card3">📊 Progress 82%</div>
+            </div>
+        </div>
+
+        <!-- SLIDE 2 -->
+        <div class="hero-slide slide-2">
+            <div class="hero-bg"></div>
+
+            <div class="hero-content">
+                <h1>Make Learning Fun 🎮</h1>
+                <p>
+                    Earn badges, compete with friends, and stay motivated with gamified learning.
+                </p>
+
+                <div class="hero-buttons">
+                    <a href="#features" class="btn-primary">Explore Features</a>
+                    <a href="javascript:void(0)" class="btn-glass" onclick="openModal()">See Demo</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- NAV DOTS -->
+        <div class="hero-dots">
+            <span class="dot active"></span>
+            <span class="dot"></span>
+        </div>
+    </div>
+
+    <!-- features -->
+    <section class="highlights">
+        <div class="container">
+
+            <h2 class="section-title">Why EduNest Stands Out</h2>
+
+            <div class="highlight-grid">
+
+                <div class="highlight-card">
+                    <div class="icon">🎮</div>
+                    <h3>Gamified Learning</h3>
+                    <p>Learn through points, streaks, and rewards</p>
+                </div>
+
+                <div class="highlight-card">
+                    <div class="icon">📊</div>
+                    <h3>Real-Time Progress</h3>
+                    <p>Track performance with smart analytics</p>
+                </div>
+
+                <div class="highlight-card">
+                    <div class="icon">👨‍👩‍👧</div>
+                    <h3>Parent Insights</h3>
+                    <p>Stay updated with your child’s growth</p>
+                </div>
+
+                <div class="highlight-card">
+                    <div class="icon">🧑‍🏫</div>
+                    <h3>Teacher Tools</h3>
+                    <p>Create, assign, and manage content easily</p>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- showcase -->
+    <section class="app-showcase">
+        <h2>Designed for Every Learning Moment</h2>
+
+        <div class="slider-container">
+
+            <button class="nav-btn prev">‹</button>
+
+            <div class="slider">
+                <div class="slide active">
+                    <img src="assets/images/student-dashboard.png" />
+                    <div class="overlay">Student Home Dashboard</div>
+                </div>
+
+                <div class="slide">
+                    <img src="assets/images/lesson-screen.png" />
+                    <div class="overlay">Lesson Screen (Video + Quiz)</div>
+                </div>
+
+                <div class="slide">
+                    <img src="assets/images/parent-dashboard.png" />
+                    <div class="overlay">Parent Dashboard (Graphs)</div>
+                </div>
+                <div class="slide">
+                    <img src="assets/images/Admin-screen.png" />
+                    <div class="overlay">Teacher Admin Panel</div>
+                </div>
+
+                <div class="slide">
+                    <img src="assets/images/persona.png" />
+                    <div class="overlay">User Personas</div>
+                </div>
+
+                <div class="slide">
+                    <img src="assets/images/outcome.png" />
+                    <div class="overlay">Outcomes & Results</div>
+                </div>
+            </div>
+
+            <button class="nav-btn next">›</button>
+
+        </div>
+    </section>
+
+    <!-- for students -->
+    <section class="students-section" id="students">
+
+        <div class="students-container">
+
+            <!-- LEFT CONTENT -->
+            <div class="students-content">
+                <h2>Learning That Feels Like a Game 🎯</h2>
+
+                <p class="subtitle">
+                    Turn everyday learning into fun challenges with rewards, streaks, and interactive lessons.
+                </p>
+
+                <ul class="features">
+                    <li>🎯 Personalized learning paths</li>
+                    <li>📚 Interactive lessons & quizzes</li>
+                    <li>🏆 Earn badges & rewards</li>
+                    <li>🔥 Build daily learning streaks</li>
+                </ul>
+
+                <a href="login.html" class="btn-primary">Start Learning</a>
+            </div>
+
+            <!-- RIGHT CARDS -->
+            <div class="students-cards">
+
+                <div class="game-card card1">
+                    <span>🏆</span>
+                    <p>+120 XP Earned</p>
+                </div>
+
+                <div class="game-card card2">
+                    <span>🔥</span>
+                    <p>7 Day Streak</p>
+                </div>
+
+                <div class="game-card card3">
+                    <span>🎯</span>
+                    <p>Math Level Up!</p>
+                </div>
+
+                <div class="game-card card4">
+                    <span>📊</span>
+                    <p>Progress 85%</p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- parents -->
+    <section class="parents-section" id="parents">
+
+        <div class="parents-container">
+
+            <!-- LEFT: DASHBOARD UI -->
+            <div class="parents-dashboard">
+
+                <div class="dashboard-card progress">
+                    <h4>Progress</h4>
+                    <div class="progress-bar">
+                        <span style="width: 75%"></span>
+                    </div>
+                    <p>75% Completed</p>
+                </div>
+
+                <div class="dashboard-card stats">
+                    <h4>Weekly Activity</h4>
+                    <p>⏱ 6h 30m Learning</p>
+                </div>
+
+                <div class="dashboard-card strengths">
+                    <h4>Strengths</h4>
+                    <p>✔ Math, Science</p>
+                </div>
+
+                <div class="dashboard-card weaknesses">
+                    <h4>Needs Improvement</h4>
+                    <p>⚠ Reading, Grammar</p>
+                </div>
+
+            </div>
+
+            <!-- RIGHT: CONTENT -->
+            <div class="parents-content">
+                <h2>Stay Involved in Your Child’s Success</h2>
+
+                <p class="subtitle">
+                    Get real-time insights into your child’s learning journey with powerful and easy-to-understand
+                    analytics.
+                </p>
+
+                <ul class="features">
+                    <li>📊 Track progress in real-time</li>
+                    <li>🎯 View strengths & weak areas</li>
+                    <li>⏱ Monitor time spent learning</li>
+                    <li>📄 Get performance reports</li>
+                </ul>
+
+                <a href="login.html" class="btn-primary">View Dashboard</a>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Teacher -->
+    <section class="teachers-section" id="teachers">
+
+        <div class="teachers-container">
+
+            <!-- LEFT CONTENT -->
+            <div class="teachers-content">
+                <h2>Teach Smarter, Not Harder</h2>
+
+                <p class="subtitle">
+                    Streamline your teaching workflow with powerful tools designed to save time and improve outcomes.
+                </p>
+
+                <ul class="features">
+                    <li>📝 Create modules & assignments</li>
+                    <li>📊 Track student performance</li>
+                    <li>⚡ Automated grading</li>
+                    <li>🏫 Manage classrooms easily</li>
+                </ul>
+
+                <a href="login.html" class="btn-primary">Start Teaching</a>
+            </div>
+
+            <!-- RIGHT WORKFLOW UI -->
+            <div class="teachers-ui">
+
+                <div class="task-card">
+                    <div class="task-header">
+                        <span>📚 New Assignment</span>
+                        <span class="status">Draft</span>
+                    </div>
+                    <p>Create Math Quiz – Grade 6</p>
+                </div>
+
+                <div class="task-card">
+                    <div class="task-header">
+                        <span>📊 Class Performance</span>
+                        <span class="status done">Updated</span>
+                    </div>
+                    <p>Average Score: 82%</p>
+                </div>
+
+                <div class="task-card">
+                    <div class="task-header">
+                        <span>⚡ Auto Grading</span>
+                        <span class="status active">Running</span>
+                    </div>
+                    <p>Grading 24 submissions...</p>
+                </div>
+
+                <div class="task-card">
+                    <div class="task-header">
+                        <span>🏫 Classroom</span>
+                        <span class="status">Active</span>
+                    </div>
+                    <p>Grade 5 – 32 Students</p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- powerful features -->
+    <section class="features-deep" id="features">
+
+        <div class="fd-container">
+
+            <!-- LEFT SIDE -->
+            <div class="fd-left">
+
+                <h2>Powerful Features for Smarter Learning</h2>
+
+                <div class="fd-tabs">
+
+                    <div class="fd-tab active" data-tab="1">
+                        🎯 Smart Learning Paths
+                    </div>
+
+                    <div class="fd-tab" data-tab="2">
+                        🤖 AI-powered Recommendations
+                    </div>
+
+                    <div class="fd-tab" data-tab="3">
+                        🎥 Interactive Video Lessons
+                    </div>
+
+                    <div class="fd-tab" data-tab="4">
+                        📝 Quiz + Instant Feedback
+                    </div>
+
+                    <div class="fd-tab" data-tab="5">
+                        🏆 Leaderboards & Competitions
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- RIGHT SIDE -->
+            <div class="fd-right">
+
+                <div class="fd-content active" data-content="1">
+                    <h3>Smart Learning Paths</h3>
+                    <p>Personalized journey based on student progress and performance.</p>
+                    <div class="mockup">📊 Path Progress UI</div>
+                </div>
+
+                <div class="fd-content" data-content="2">
+                    <h3>AI-powered Recommendations</h3>
+                    <p>Get smart suggestions to improve learning outcomes.</p>
+                    <div class="mockup">🤖 AI Suggestion Panel</div>
+                </div>
+
+                <div class="fd-content" data-content="3">
+                    <h3>Interactive Video Lessons</h3>
+                    <p>Watch, learn, and interact in real-time.</p>
+                    <div class="mockup">🎥 Video Player UI</div>
+                </div>
+
+                <div class="fd-content" data-content="4">
+                    <h3>Quiz + Instant Feedback</h3>
+                    <p>Immediate results with explanations.</p>
+                    <div class="mockup">📝 Quiz Result UI</div>
+                </div>
+
+                <div class="fd-content" data-content="5">
+                    <h3>Leaderboards & Competitions</h3>
+                    <p>Compete and stay motivated.</p>
+                    <div class="mockup">🏆 Leaderboard UI</div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="testimonials">
+
+        <h2>What People Are Saying</h2>
+
+        <div class="testi-slider">
+
+            <div class="testi-track">
+
+                <div class="testi-card active">
+                    <p>“My child loves learning now!”</p>
+                    <div class="user">
+                        <img src="https://i.pravatar.cc/60?img=1">
+                        <div>
+                            <h4>Priya Sharma</h4>
+                            <span>Parent</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testi-card">
+                    <p>“Best dashboard for tracking progress”</p>
+                    <div class="user">
+                        <img src="https://i.pravatar.cc/60?img=2">
+                        <div>
+                            <h4>Rahul Verma</h4>
+                            <span>Parent</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testi-card">
+                    <p>“Teaching became 2x easier”</p>
+                    <div class="user">
+                        <img src="https://i.pravatar.cc/60?img=3">
+                        <div>
+                            <h4>Anjali Mehta</h4>
+                            <span>Teacher</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <footer class="footer">
+
+        <div class="footer-container">
+
+            <!-- BRAND -->
+            <div class="footer-col brand">
+                <h3>EduNest</h3>
+                <p>
+                    Empowering students, parents, and teachers with smarter learning tools.
+                </p>
+
+                <div class="socials">
+                    <a href="#">🌐</a>
+                    <a href="#">🐦</a>
+                    <a href="#">📘</a>
+                    <a href="#">📸</a>
+                </div>
+            </div>
+
+            <!-- EDU NEST -->
+
+            <!-- PRODUCT -->
+            <div class="footer-col">
+                <h4>Product</h4>
+                <ul>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#">Pricing</a></li>
+                    <li><a href="contact.html">Demo</a></li>
+                </ul>
+            </div>
+
+            <!-- RESOURCES -->
+            <div class="footer-col">
+                <h4>Resources</h4>
+                <ul>
+                    <li><a href="#students">Students</a></li>
+                    <li><a href="#parents">Parents</a></li>
+                    <li><a href="#teachers">Teachers</a></li>
+                    <!-- <li><a href="#">FAQs</a></li> -->
+                </ul>
+            </div>
+
+
+            <!-- LEGAL -->
+            <div class="footer-col">
+                <h4>Resources</h4>
+                <ul>
+                    <li><a href="contact.html">Help Center</a></li>
+                    <li><a href="contact.html">contact</a></li>
+                    <!-- <li><a href="#">FAQs</a></li> -->
+                </ul>
+            </div>
+
+            <!-- CONTACT -->
+            <div class="footer-col">
+                <h4>Contact</h4>
+                <ul>
+                    <li>Email: support@edunest.com</li>
+                </ul>
+            </div>
+
+        </div>
+
+        <!-- BOTTOM -->
+        <div class="footer-bottom">
+            © 2026 EduNest. All rights reserved.
+        </div>
+
+    </footer>
+    <div class="modal" id="demoModal">
+
+        <div class="modal-content" id="modalBox">
+
+            <span class="close" onclick="closeModal()">&times;</span>
+
+            <h2>Request a Demo</h2>
+
+            <form id="demoForm">
+
+                <input type="text" id="name" placeholder="Full Name" required>
+                <input type="email" id="email" placeholder="Email Address" required>
+                <input type="text" placeholder="Farm Size / Location">
+
+                <p class="" id="formError"></p>
+
+                <button type="submit">Submit Request</button>
+
+            </form>
+
+        </div>
+
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="assets/js/script.js"></script>
+    <script>
+
+        const toggle = document.getElementById("menuToggle");
+        const navLinks = document.getElementById("mobileMenu");
+
+        // Toggle mobile menu
+        toggle.addEventListener("click", () => {
+            navLinks.classList.toggle("active");
+        });
+
+        const slides = document.querySelectorAll(".hero-slide");
+        const dots = document.querySelectorAll(".dot");
+
+        let current = 0;
+
+        function showSlide(i) {
+            slides.forEach(s => s.classList.remove("active"));
+            dots.forEach(d => d.classList.remove("active"));
+
+            slides[i].classList.add("active");
+            dots[i].classList.add("active");
+        }
+
+        setInterval(() => {
+            current = (current + 1) % slides.length;
+            showSlide(current);
+        }, 5000);
+
+        dots.forEach((dot, i) => {
+            dot.addEventListener("click", () => {
+                current = i;
+                showSlide(current);
+            });
+        });
+        const slider = document.querySelector(".slider");
+        const slidesapp = document.querySelectorAll(".slide");
+        const nextBtn = document.querySelector(".next");
+        const prevBtn = document.querySelector(".prev");
+
+        let index = 0;
+
+        /* UPDATE ACTIVE CENTER */
+        function updateActive() {
+            slidesapp.forEach(slide => slide.classList.remove("active"));
+
+            const center = slider.scrollLeft + slider.offsetWidth / 2;
+
+            slidesapp.forEach(slide => {
+                const slideCenter = slide.offsetLeft + slide.offsetWidth / 2;
+
+                if (Math.abs(center - slideCenter) < 150) {
+                    slide.classList.add("active");
+                }
+            });
+        }
+
+        /* AUTO SCROLL */
+        setInterval(() => {
+            index = (index + 1) % slidesapp.length;
+            slider.scrollTo({
+                left: slides[index].offsetLeft - 100,
+                behavior: "smooth"
+            });
+        }, 4000);
+
+        /* BUTTONS */
+        nextBtn.onclick = () => {
+            slider.scrollBy({ left: 320, behavior: "smooth" });
+        };
+
+        prevBtn.onclick = () => {
+            slider.scrollBy({ left: -320, behavior: "smooth" });
+        };
+
+        slider.addEventListener("scroll", updateActive);
+        window.addEventListener("load", updateActive);
+
+        document.addEventListener("DOMContentLoaded", function () {
+
+            const tabs = document.querySelectorAll(".fd-tab");
+            const contents = document.querySelectorAll(".fd-content");
+
+            tabs.forEach(tab => {
+                tab.addEventListener("click", function () {
+
+                    const id = this.getAttribute("data-tab");
+
+                    // remove active
+                    tabs.forEach(t => t.classList.remove("active"));
+                    contents.forEach(c => c.classList.remove("active"));
+
+                    // add active to clicked
+                    this.classList.add("active");
+
+                    // match content
+                    const activeContent = document.querySelector(
+                        `.fd-content[data-content="${id}"]`
+                    );
+
+                    if (activeContent) {
+                        activeContent.classList.add("active");
+                    }
+
+                });
+            });
+
+            const track = document.querySelector(".testi-track");
+            const cards = document.querySelectorAll(".testi-card");
+
+            let index = 0;
+
+            function updateSlider() {
+                track.style.transform = `translateX(-${index * 350}px)`;
+
+                cards.forEach(c => c.classList.remove("active"));
+                if (cards[index]) {
+                    cards[index].classList.add("active");
+                }
+            }
+
+            setInterval(() => {
+                index = (index + 1) % cards.length;
+                updateSlider();
+            }, 4000);
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener("click", function (e) {
+                    e.preventDefault();
+
+                    const target = document.querySelector(this.getAttribute("href"));
+                    const offset = 100; // header height
+
+                    const bodyRect = document.body.getBoundingClientRect().top;
+                    const elementRect = target.getBoundingClientRect().top;
+                    const elementPosition = elementRect - bodyRect;
+                    const offsetPosition = elementPosition - offset;
+
+                    window.scrollTo({
+                        top: offsetPosition,
+                        behavior: "smooth"
+                    });
+                });
+            });
+
+        });
+
+
+    </script>
+
+</body>
+
+</html>

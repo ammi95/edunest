@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing - EduNest</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+
+<body>
+    <div class="top-bar">
+        <div class="top-left">
+            <span>📱 +91 98765 43210</span>
+            <span>✉️ support@edunest.com</span>
+        </div>
+        <div class="top-right">
+            <a href="login.html">Login</a>
+        </div>
+    </div>
+
+    <!-- MAIN HEADER -->
+    <header class="header">
+        <nav class="nav">
+
+            <!-- LEFT MENU -->
+            <ul class="nav-left">
+                <li><a href="/">Home</a></li>
+                <li><a href="/#features">Features</a></li>
+                <li><a href="/#students">Students</a></li>
+                <li><a href="/#parents">Parents</a></li>
+            </ul>
+
+            <!-- LOGO CENTER -->
+             <div class="logo"><a href="herf">EduNest</a></div>
+
+            <!-- RIGHT MENU -->
+            <ul class="nav-right">
+                <li><a href="#teachers">Teachers</a></li>
+                <li><a href="pricing.html">Pricing</a></li>
+                <!-- <li><a href="#">About</a></li> -->
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="javascript:void(0)" class="btn-primary" onclick="openModal()">Get Started</a></li>
+            </ul>
+
+            <!-- MOBILE MENU ICON -->
+            <div class="menu-toggle" id="menuToggle">☰</div>
+
+        </nav>
+    </header>
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="/">Home</a>
+        <a href="/#features">Features</a>
+        <a href="/#students">Students</a>
+        <a href="/#parents">Parents</a>
+        <a href="/#teachers">Teachers</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="contact.html">Contact</a>
+        <a href="login.html">Login</a>
+        <a href="#" class="btn-primary">Get Started</a>
+    </div>
+    <section class="pricing">
+
+        <h2 class="section-title">Simple, Transparent Pricing</h2>
+        <p class="section-subtext">Choose the plan that fits your needs</p>
+
+        <div class="pricing-grid">
+
+            <!-- FREE -->
+            <div class="pricing-card">
+                <h3>Starter</h3>
+                <p class="price">₹0 <span>/month</span></p>
+
+                <ul>
+                    <li>✔ Basic Yield Prediction</li>
+                    <li>✔ Limited Data Access</li>
+                    <li>✔ 1 Field Analysis</li>
+                    <li>✖ No Reports</li>
+                </ul>
+
+                <a href="contact.html" class="btn-outline">Get Started</a>
+            </div>
+
+            <!-- PRO (Highlight) -->
+            <div class="pricing-card popular">
+                <div class="badge">Most Popular</div>
+
+                <h3>Pro</h3>
+                <p class="price">₹999 <span>/month</span></p>
+
+                <ul>
+                    <li>✔ Advanced Predictions</li>
+                    <li>✔ Scenario Comparison</li>
+                    <li>✔ Risk Analysis</li>
+                    <li>✔ Export Reports</li>
+                </ul>
+
+                <a href="#" class="btn-primary">Start Free Trial</a>
+            </div>
+
+            <!-- ENTERPRISE -->
+            <div class="pricing-card">
+                <h3>Enterprise</h3>
+                <p class="price">₹1999 <span>/month</span></p>
+
+                <ul>
+                    <li>✔ Unlimited Fields</li>
+                    <li>✔ API Access</li>
+                    <li>✔ Dedicated Support</li>
+                    <li>✔ Custom Models</li>
+                </ul>
+
+                <a href="contact.html" class="btn-outline">Get Started</a>
+            </div>
+
+        </div>
+
+    </section>
+    <footer class="footer">
+
+        <div class="footer-container">
+
+            <!-- BRAND -->
+            <div class="footer-col brand">
+                <h3>EduNest</h3>
+                <p>
+                    Empowering students, parents, and teachers with smarter learning tools.
+                </p>
+
+                <div class="socials">
+                    <a href="#">🌐</a>
+                    <a href="#">🐦</a>
+                    <a href="#">📘</a>
+                    <a href="#">📸</a>
+                </div>
+            </div>
+
+            <!-- EDU NEST -->
+
+            <!-- PRODUCT -->
+            <div class="footer-col">
+                <h4>Product</h4>
+                <ul>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#">Pricing</a></li>
+                    <li><a href="contact.html">Demo</a></li>
+                </ul>
+            </div>
+
+            <!-- RESOURCES -->
+            <div class="footer-col">
+                <h4>Resources</h4>
+                <ul>
+                    <li><a href="/#students">Students</a></li>
+                    <li><a href="/#parents">Parents</a></li>
+                    <li><a href="/#teachers">Teachers</a></li>
+                    <!-- <li><a href="#">FAQs</a></li> -->
+                </ul>
+            </div>
+
+
+            <!-- LEGAL -->
+            <div class="footer-col">
+
+                <h4>Resources</h4>
+                <ul>
+                    <li><a href="contact.html">Help Center</a></li>
+                    <li><a href="contact.html">contact</a></li>
+                    <!-- <li><a href="#">FAQs</a></li> -->
+                </ul>
+            </div>
+
+            <!-- CONTACT -->
+            <div class="footer-col">
+                <h4>Contact</h4>
+                <ul>
+                    <li>Email: support@edunest.com</li>
+                </ul>
+            </div>
+
+        </div>
+
+        <!-- BOTTOM -->
+        <div class="footer-bottom">
+            © 2026 EduNest. All rights reserved.
+        </div>
+
+    </footer>
+    <div class="modal" id="demoModal">
+
+        <div class="modal-content" id="modalBox">
+
+            <span class="close" onclick="closeModal()">&times;</span>
+
+            <h2>Request a Demo</h2>
+
+            <form id="demoForm">
+
+                <input type="text" id="name" placeholder="Full Name" required>
+                <input type="email" id="email" placeholder="Email Address" required>
+                <input type="text" placeholder="Farm Size / Location">
+
+                <p class="" id="formError"></p>
+
+                <button type="submit">Submit Request</button>
+
+            </form>
+
+        </div>
+
+    </div>
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>

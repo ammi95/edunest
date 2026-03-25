@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - EduNest</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <div class="top-bar">
+        <div class="top-left">
+            <span>📱 +91 98765 43210</span>
+            <span>✉️ support@edunest.com</span>
+        </div>
+        <div class="top-right">
+             <div class="logo"><a href="herf">EduNest</a></div>
+        </div>
+    </div>
+
+    <!-- MAIN HEADER -->
+    <header class="header">
+        <nav class="nav">
+
+            <!-- LEFT MENU -->
+            <ul class="nav-left">
+                <li><a href="/">Home</a></li>
+                <li><a href="/features">Features</a></li>
+                <li><a href="/students">Students</a></li>
+                <li><a href="/parents">Parents</a></li>
+            </ul>
+
+            <!-- LOGO CENTER -->
+            <div class="logo">EduNest</div>
+
+            <!-- RIGHT MENU -->
+            <ul class="nav-right">
+                <li><a href="#teachers">Teachers</a></li>
+                <li><a href="#">Pricing</a></li>
+                <!-- <li><a href="#">About</a></li> -->
+                <li><a href="#">Contact</a></li>
+                <li><a href="javascript:void(0)" class="btn-primary" onclick="openModal()">Get Started</a></li>
+            </ul>
+
+            <!-- MOBILE MENU ICON -->
+            <div class="menu-toggle" id="menuToggle">☰</div>
+
+        </nav>
+    </header>
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="/">Home</a>
+        <a href="/#features">Features</a>
+        <a href="/#students">Students</a>
+        <a href="/#parents">Parents</a>
+        <a href="/#teachers">Teachers</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="contact.html">Contact</a>
+        <a href="login.html">Login</a>
+        <a href="#" class="btn-primary">Get Started</a>
+    </div>
+    <section class="contact-hero">
+        <h1>Let’s Talk 👋</h1>
+        <p>Have questions? We’re here to help you grow smarter.</p>
+    </section>
+
+    <section class="contact-main">
+
+        <!-- LEFT SIDE -->
+        <div class="contact-left">
+
+            <!-- CHAT CARD -->
+            <div class="chat-card">
+                <h3>💬 Quick Help</h3>
+                <p>Usually replies within minutes</p>
+                <button>Start Live Chat</button>
+            </div>
+
+            <!-- INFO -->
+            <div class="info-card">
+                <h4>📧 Email</h4>
+                <p>support@edunest.com</p>
+            </div>
+
+            <div class="info-card">
+                <h4>📍 Location</h4>
+                <p>Delhi, India</p>
+            </div>
+
+        </div>
+
+        <!-- RIGHT SIDE -->
+        <div class="contact-right">
+
+            <form id="contactForm">
+
+                <div class="input-group">
+                    <input type="text" required>
+                    <label>Your Name</label>
+                </div>
+
+                <div class="input-group">
+                    <input type="email" required>
+                    <label>Your Email</label>
+                </div>
+
+                <div class="input-group">
+                    <textarea rows="4" required></textarea>
+                    <label>Your Message</label>
+                </div>
+
+                <button type="submit" class="btn-submit">
+                    Send Message
+                </button>
+
+                <p class="success-msg">✅ Message sent successfully!</p>
+
+            </form>
+
+        </div>
+
+    </section>
+
+    <!-- MAP -->
+    <section class="map-section">
+        <iframe src="https://maps.google.com/maps?q=delhi&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0"
+            allowfullscreen>
+        </iframe>
+    </section>
+    <footer class="footer">
+
+        <div class="footer-container">
+
+            <!-- BRAND -->
+            <div class="footer-col brand">
+                <h3>EduNest</h3>
+                <p>
+                    Empowering students, parents, and teachers with smarter learning tools.
+                </p>
+
+                <div class="socials">
+                    <a href="#">🌐</a>
+                    <a href="#">🐦</a>
+                    <a href="#">📘</a>
+                    <a href="#">📸</a>
+                </div>
+            </div>
+
+            <!-- EDU NEST -->
+
+            <!-- PRODUCT -->
+            <div class="footer-col">
+                <h4>Product</h4>
+                <ul>
+                    <li><a href="/#features">Features</a></li>
+                    <li><a href="#">Pricing</a></li>
+                    <li><a href="contact.html">Demo</a></li>
+                </ul>
+            </div>
+
+            <!-- RESOURCES -->
+            <div class="footer-col">
+                <h4>Resources</h4>
+                <ul>
+                    <li><a href="/#students">Students</a></li>
+                    <li><a href="/#parents">Parents</a></li>
+                    <li><a href="/#teachers">Teachers</a></li>
+                    <!-- <li><a href="#">FAQs</a></li> -->
+                </ul>
+            </div>
+
+            <!-- LEGAL -->
+           <div class="footer-col">
+                <h4>Resources</h4>
+                <ul>
+                    <li><a href="contact.html">Help Center</a></li>
+                    <li><a href="contact.html">contact</a></li>
+                    <!-- <li><a href="#">FAQs</a></li> -->
+                </ul>
+            </div>
+
+            <!-- CONTACT -->
+            <div class="footer-col">
+                <h4>Contact</h4>
+                <ul>
+                    <li>Email: support@edunest.com</li>
+                </ul>
+            </div>
+
+        </div>
+
+        <!-- BOTTOM -->
+        <div class="footer-bottom">
+            © 2026 EduNest. All rights reserved.
+        </div>
+
+    </footer>
+    <div class="modal" id="demoModal">
+
+        <div class="modal-content" id="modalBox">
+
+            <span class="close" onclick="closeModal()">&times;</span>
+
+            <h2>Request a Demo</h2>
+
+            <form id="demoForm">
+
+                <input type="text" id="name" placeholder="Full Name" required>
+                <input type="email" id="email" placeholder="Email Address" required>
+                <input type="text" placeholder="Farm Size / Location">
+
+                <p class="" id="formError"></p>
+
+                <button type="submit">Submit Request</button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+    <script src="assets/js/script.js"></script>
+    <script>
+        const form = document.getElementById("contactForm");
+        const successMsg = document.querySelector(".success-msg");
+
+        form.addEventListener("submit", function (e) {
+            e.preventDefault();
+
+            successMsg.style.display = "block";
+
+            form.reset();
+
+            setTimeout(() => {
+                successMsg.style.display = "none";
+            }, 3000);
+        });
+    </script>
+</body>
+
+</html>
