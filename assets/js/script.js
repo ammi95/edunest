@@ -58,55 +58,6 @@ window.onclick = function (e) {
     }
 }
 
-document.addEventListener("DOMContentLoaded", function () {
-
-    const tabs = document.querySelectorAll(".fd-tab");
-    const contents = document.querySelectorAll(".fd-content");
-
-    tabs.forEach(tab => {
-        tab.addEventListener("click", function () {
-
-            const id = this.getAttribute("data-tab");
-
-            // remove active
-            tabs.forEach(t => t.classList.remove("active"));
-            contents.forEach(c => c.classList.remove("active"));
-
-            // add active to clicked
-            this.classList.add("active");
-
-            // match content
-            const activeContent = document.querySelector(
-                `.fd-content[data-content="${id}"]`
-            );
-
-            if (activeContent) {
-                activeContent.classList.add("active");
-            }
-
-        });
-    });
-
-    const track = document.querySelector(".testi-track");
-    const cards = document.querySelectorAll(".testi-card");
-
-    let index = 0;
-
-    function updateSlider() {
-        track.style.transform = `translateX(-${index * 350}px)`;
-
-        cards.forEach(c => c.classList.remove("active"));
-        if (cards[index]) {
-            cards[index].classList.add("active");
-        }
-    }
-
-    setInterval(() => {
-        index = (index + 1) % cards.length;
-        updateSlider();
-    }, 4000);
-});
-
 /* FORM VALIDATION */
 form.addEventListener("submit", function (e) {
     e.preventDefault();
@@ -125,6 +76,19 @@ form.addEventListener("submit", function (e) {
 
         form.reset();
     }
+});
+
+$(document).ready(function () {
+    $(".live-btn").click(function () {
+
+        $("#toastMsg").addClass("show");
+
+        setTimeout(function () {
+            $("#toastMsg").removeClass("show");
+        }, 2500);
+
+    });
+
 });
 
 

@@ -14,8 +14,8 @@
     <!-- TOP BAR -->
     <div class="top-bar">
         <div class="top-left">
-            <span>📱 +91 98765 43210</span>
-            <span>✉️ support@edunest.com</span>
+            <span>📱 +353 1 555 0122</span>
+            <span>✉️ support@edunest.ie</span>
         </div>
         <div class="top-right">
             <a href="login.html">Login</a>
@@ -35,7 +35,7 @@
             </ul>
 
             <!-- LOGO CENTER -->
-            <div class="logo"><a href="herf">EduNest</a></div>
+            <div class="logo"><a href="/">EduNest</a></div>
 
             <!-- RIGHT MENU -->
             <ul class="nav-right">
@@ -60,7 +60,7 @@
         <a href="pricing.html">Pricing</a>
         <a href="contact.html">Contact</a>
         <a href="login.html">Login</a>
-        <a href="#" class="btn-primary">Get Started</a>
+        <a href="#" class="btn-primary" onclick="openModal()">Get Started</a>
     </div>
     <div class="hero-slider">
 
@@ -459,8 +459,8 @@
                     <div class="user">
                         <img src="https://i.pravatar.cc/60?img=2">
                         <div>
-                            <h4>Rahul Verma</h4>
-                            <span>Parent</span>
+                            <h4>John Smith</h4>
+                            <span>Student</span>
                         </div>
                     </div>
                 </div>
@@ -470,7 +470,7 @@
                     <div class="user">
                         <img src="https://i.pravatar.cc/60?img=3">
                         <div>
-                            <h4>Anjali Mehta</h4>
+                            <h4>Mike M.</h4>
                             <span>Teacher</span>
                         </div>
                     </div>
@@ -493,12 +493,7 @@
                     Empowering students, parents, and teachers with smarter learning tools.
                 </p>
 
-                <div class="socials">
-                    <a href="#">🌐</a>
-                    <a href="#">🐦</a>
-                    <a href="#">📘</a>
-                    <a href="#">📸</a>
-                </div>
+
             </div>
 
             <!-- EDU NEST -->
@@ -508,7 +503,7 @@
                 <h4>Product</h4>
                 <ul>
                     <li><a href="#features">Features</a></li>
-                    <li><a href="#">Pricing</a></li>
+                    <li><a href="pricing.html">Pricing</a></li>
                     <li><a href="contact.html">Demo</a></li>
                 </ul>
             </div>
@@ -530,7 +525,7 @@
                 <h4>Resources</h4>
                 <ul>
                     <li><a href="contact.html">Help Center</a></li>
-                    <li><a href="contact.html">contact</a></li>
+                    <li><a href="contact.html">Contact</a></li>
                     <!-- <li><a href="#">FAQs</a></li> -->
                 </ul>
             </div>
@@ -539,7 +534,7 @@
             <div class="footer-col">
                 <h4>Contact</h4>
                 <ul>
-                    <li>Email: support@edunest.com</li>
+                    <li>Email: support@edunest.ie</li>
                 </ul>
             </div>
 
@@ -563,7 +558,8 @@
 
                 <input type="text" id="name" placeholder="Full Name" required>
                 <input type="email" id="email" placeholder="Email Address" required>
-                <input type="text" placeholder="Farm Size / Location">
+                <input type="phone" id="phone" placeholder="phone number" required>
+                <input type="message" id="message" placeholder="messager" required>
 
                 <p class="" id="formError"></p>
 
@@ -576,7 +572,7 @@
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="assets/js/script.js"></script>
+    <!-- <script src="assets/js/script.js"></script> -->
     <script>
 
         const toggle = document.getElementById("menuToggle");
@@ -587,74 +583,34 @@
             navLinks.classList.toggle("active");
         });
 
-        const slides = document.querySelectorAll(".hero-slide");
-        const dots = document.querySelectorAll(".dot");
+        document.addEventListener("DOMContentLoaded", () => {
 
-        let current = 0;
+            const slides = document.querySelectorAll(".hero-slide");
+            const dots = document.querySelectorAll(".dot");
 
-        function showSlide(i) {
-            slides.forEach(s => s.classList.remove("active"));
-            dots.forEach(d => d.classList.remove("active"));
+            let current = 0;
 
-            slides[i].classList.add("active");
-            dots[i].classList.add("active");
-        }
+            function showSlide(i) {
+                slides.forEach(s => s.classList.remove("active"));
+                dots.forEach(d => d.classList.remove("active"));
 
-        setInterval(() => {
-            current = (current + 1) % slides.length;
-            showSlide(current);
-        }, 5000);
+                slides[i].classList.add("active");
+                dots[i].classList.add("active");
+            }
 
-        dots.forEach((dot, i) => {
-            dot.addEventListener("click", () => {
-                current = i;
+            // AUTO SLIDE
+            setInterval(() => {
+                current = (current + 1) % slides.length;
                 showSlide(current);
+            }, 2000);
+
+            // DOT CLICK
+            dots.forEach((dot, i) => {
+                dot.addEventListener("click", () => {
+                    current = i;
+                    showSlide(current);
+                });
             });
-        });
-        const slider = document.querySelector(".slider");
-        const slidesapp = document.querySelectorAll(".slide");
-        const nextBtn = document.querySelector(".next");
-        const prevBtn = document.querySelector(".prev");
-
-        let index = 0;
-
-        /* UPDATE ACTIVE CENTER */
-        function updateActive() {
-            slidesapp.forEach(slide => slide.classList.remove("active"));
-
-            const center = slider.scrollLeft + slider.offsetWidth / 2;
-
-            slidesapp.forEach(slide => {
-                const slideCenter = slide.offsetLeft + slide.offsetWidth / 2;
-
-                if (Math.abs(center - slideCenter) < 150) {
-                    slide.classList.add("active");
-                }
-            });
-        }
-
-        /* AUTO SCROLL */
-        setInterval(() => {
-            index = (index + 1) % slidesapp.length;
-            slider.scrollTo({
-                left: slides[index].offsetLeft - 100,
-                behavior: "smooth"
-            });
-        }, 4000);
-
-        /* BUTTONS */
-        nextBtn.onclick = () => {
-            slider.scrollBy({ left: 320, behavior: "smooth" });
-        };
-
-        prevBtn.onclick = () => {
-            slider.scrollBy({ left: -320, behavior: "smooth" });
-        };
-
-        slider.addEventListener("scroll", updateActive);
-        window.addEventListener("load", updateActive);
-
-        document.addEventListener("DOMContentLoaded", function () {
 
             const tabs = document.querySelectorAll(".fd-tab");
             const contents = document.querySelectorAll(".fd-content");
@@ -718,6 +674,98 @@
                         behavior: "smooth"
                     });
                 });
+            });
+
+        });
+        $(document).ready(function () {
+
+            const $slider = $(".slider");
+            const $slides = $(".slide");
+            let index = 0;
+
+            function goToSlide(i) {
+                const slideWidth = $slides.outerWidth(true);
+
+                $slider.animate({
+                    scrollLeft: i * slideWidth
+                }, 500);
+
+                $slides.removeClass("active");
+                $slides.eq(i).addClass("active");
+            }
+
+            /* NEXT */
+            $(".next").click(function () {
+                index = (index + 1) % $slides.length;
+                goToSlide(index);
+            });
+
+            /* PREV */
+            $(".prev").click(function () {
+                index = (index - 1 + $slides.length) % $slides.length;
+                goToSlide(index);
+            });
+
+            /* AUTO SLIDE */
+            setInterval(function () {
+                index = (index + 1) % $slides.length;
+                goToSlide(index);
+            }, 4000);
+            const $modal = $("#demoModal");
+            const $form = $("#demoForm");
+            const $error = $("#formError");
+            const $box = $("#modalBox");
+
+            /* OPEN MODAL */
+            window.openModal = function () {
+                $modal.fadeIn(200).css("display", "flex");
+            };
+
+            /* CLOSE MODAL */
+            window.closeModal = function () {
+                $modal.fadeOut(200);
+            };
+
+            /* CLOSE OUTSIDE */
+            $(window).on("click", function (e) {
+                if ($(e.target).is("#demoModal")) {
+                    $modal.fadeOut(200);
+                }
+            });
+
+            /* FORM SUBMIT */
+            $form.on("submit", function (e) {
+                e.preventDefault();
+
+                const name = $("#name").val().trim();
+                const email = $("#email").val().trim();
+
+                if (!name || !email) {
+                    $error.text("Please fill all required fields").removeClass("success");
+
+                    $box.addClass("shake");
+                    setTimeout(() => $box.removeClass("shake"), 300);
+
+                    return;
+                }
+
+                /* EMAIL VALIDATION */
+                const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+                if (!emailPattern.test(email)) {
+                    $error.text("Enter valid email").removeClass("success");
+                    return;
+                }
+
+                /* SUCCESS */
+                $error.addClass("success").text("✅ Request submitted successfully!");
+
+                $form[0].reset();
+
+                /* AUTO CLOSE */
+                setTimeout(() => {
+                    $modal.fadeOut(300);
+                }, 2000);
             });
 
         });

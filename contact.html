@@ -6,16 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us - EduNest</title>
     <link rel="stylesheet" href="assets/css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 
 <body>
     <div class="top-bar">
         <div class="top-left">
-            <span>📱 +91 98765 43210</span>
-            <span>✉️ support@edunest.com</span>
+            <span>📱 +353 1 555 0122</span>
+            <span>✉️ support@edunest.ie</span>
         </div>
         <div class="top-right">
-             <div class="logo"><a href="herf">EduNest</a></div>
+            <a href="login.html">Login</a>
         </div>
     </div>
 
@@ -26,20 +27,20 @@
             <!-- LEFT MENU -->
             <ul class="nav-left">
                 <li><a href="/">Home</a></li>
-                <li><a href="/features">Features</a></li>
-                <li><a href="/students">Students</a></li>
-                <li><a href="/parents">Parents</a></li>
+                <li><a href="/#features">Features</a></li>
+                <li><a href="/#students">Students</a></li>
+                <li><a href="/#parents">Parents</a></li>
             </ul>
 
             <!-- LOGO CENTER -->
-            <div class="logo">EduNest</div>
+            <div class="logo"><a href="/">EduNest</a></div>
 
             <!-- RIGHT MENU -->
             <ul class="nav-right">
-                <li><a href="#teachers">Teachers</a></li>
-                <li><a href="#">Pricing</a></li>
+                <li><a href="/#teachers">Teachers</a></li>
+                <li><a href="pricing.html">Pricing</a></li>
                 <!-- <li><a href="#">About</a></li> -->
-                <li><a href="#">Contact</a></li>
+                <li><a href="contact.html">Contact</a></li>
                 <li><a href="javascript:void(0)" class="btn-primary" onclick="openModal()">Get Started</a></li>
             </ul>
 
@@ -73,18 +74,25 @@
             <div class="chat-card">
                 <h3>💬 Quick Help</h3>
                 <p>Usually replies within minutes</p>
-                <button>Start Live Chat</button>
+                <button class="live-btn">Start Live Chat</button>
+                <div id="toastMsg" class="toast-msg">
+                    ⚠️ Please login first, then you can start chat.
+                </div>
             </div>
+
 
             <!-- INFO -->
             <div class="info-card">
                 <h4>📧 Email</h4>
-                <p>support@edunest.com</p>
+                <p>support@edunest.ie</p>
             </div>
 
             <div class="info-card">
                 <h4>📍 Location</h4>
-                <p>Delhi, India</p>
+                <p>EduNest Learning Ltd.
+                    12 Pearse Street
+                    Dublin 2, D02 F992
+                    Ireland</p>
             </div>
 
         </div>
@@ -123,9 +131,10 @@
 
     <!-- MAP -->
     <section class="map-section">
-        <iframe src="https://maps.google.com/maps?q=delhi&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0"
-            allowfullscreen>
-        </iframe>
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3556602.428380062!2d-13.500493834853193!3d53.27316102731664!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48670e85c619870b%3A0x3523510470bb0f7!2sEducation%20State!5e1!3m2!1sen!2sin!4v1774634293550!5m2!1sen!2sin"
+            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
     </section>
     <footer class="footer">
 
@@ -138,12 +147,6 @@
                     Empowering students, parents, and teachers with smarter learning tools.
                 </p>
 
-                <div class="socials">
-                    <a href="#">🌐</a>
-                    <a href="#">🐦</a>
-                    <a href="#">📘</a>
-                    <a href="#">📸</a>
-                </div>
             </div>
 
             <!-- EDU NEST -->
@@ -153,7 +156,7 @@
                 <h4>Product</h4>
                 <ul>
                     <li><a href="/#features">Features</a></li>
-                    <li><a href="#">Pricing</a></li>
+                    <li><a href="pricing.html">Pricing</a></li>
                     <li><a href="contact.html">Demo</a></li>
                 </ul>
             </div>
@@ -170,11 +173,11 @@
             </div>
 
             <!-- LEGAL -->
-           <div class="footer-col">
+            <div class="footer-col">
                 <h4>Resources</h4>
                 <ul>
                     <li><a href="contact.html">Help Center</a></li>
-                    <li><a href="contact.html">contact</a></li>
+                    <li><a href="contact.html">Contact</a></li>
                     <!-- <li><a href="#">FAQs</a></li> -->
                 </ul>
             </div>
@@ -183,7 +186,7 @@
             <div class="footer-col">
                 <h4>Contact</h4>
                 <ul>
-                    <li>Email: support@edunest.com</li>
+                    <li>Email: support@edunest.ie</li>
                 </ul>
             </div>
 
@@ -235,6 +238,7 @@
                 successMsg.style.display = "none";
             }, 3000);
         });
+        
     </script>
 </body>
 
