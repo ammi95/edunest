@@ -39,7 +39,6 @@
             <ul class="nav-right">
                 <li><a href="/#teachers">Teachers</a></li>
                 <li><a href="pricing.html">Pricing</a></li>
-                <!-- <li><a href="#">About</a></li> -->
                 <li><a href="contact.html">Contact</a></li>
                 <li><a href="javascript:void(0)" class="btn-primary" onclick="openModal()">Get Started</a></li>
             </ul>
@@ -210,12 +209,11 @@
 
                 <input type="text" id="name" placeholder="Full Name" required>
                 <input type="email" id="email" placeholder="Email Address" required>
-                <input type="tel" maxlength="10" pattern="[0-9]{10}" placeholder="Phone Number" required maxlength="10">
+                <input type="number" id="phone" maxlength="10" placeholder="Phone Number" required>
                 <input type="message" id="message" placeholder="messager" required>
-
                 <p class="" id="formError"></p>
+                <button type="submit">Submit Request</button>
 
-                <a href="javascript:void(0)" type="submit">Submit Request</a>
 
             </form>
 
@@ -225,21 +223,24 @@
 
     <script src="assets/js/script.js"></script>
     <script>
-        const form = document.getElementById("contactForm");
+        const contacform = document.getElementById("contactForm");
         const successMsg = document.querySelector(".success-msg");
 
-        form.addEventListener("submit", function (e) {
+        contacform.addEventListener("submit", function (e) {
             e.preventDefault();
 
+            // show message
             successMsg.style.display = "block";
 
+            // reset form
             form.reset();
 
+            // hide after 3s
             setTimeout(() => {
                 successMsg.style.display = "none";
-            }, 3000);
+            }, 6000);
         });
-        
+
     </script>
 </body>
 
