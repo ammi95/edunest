@@ -195,8 +195,8 @@
 
                 <input type="text" id="name" placeholder="Full Name" required>
                 <input type="email" id="email" placeholder="Email Address" required>
-                <input type="number" id="phone" maxlength="10" placeholder="Phone Number" required>
-                <input type="message" id="message" placeholder="messager" required>
+                <input type="phone" id="phone" maxlength="10" placeholder="Phone Number" required>
+                <input type="message" id="message" placeholder="Message" required>
 
                 <p class="" id="formError"></p>
 
@@ -208,6 +208,11 @@
 
     </div>
     <script src="assets/js/script.js"></script>
+    <script>
+        document.getElementById("phone").addEventListener("input", function () {
+            this.value = this.value.replace(/[^0-9]/g, "");
+        });
+    </script>
 </body>
 
 </html>
